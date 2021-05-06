@@ -40,6 +40,7 @@ Installing `apache-airflow-providers-google` from the `conda-forge` channel can 
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `apache-airflow-providers-google` can be installed with:
