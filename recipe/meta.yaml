@@ -16,11 +16,12 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.6
+    - pip
     - setuptools
     - wheel
   run:
+    - python >=3.6
     - apache-airflow >=2.0.0
     - google-ads >=4.0.0,<8.0.0
     - google-api-core >=1.25.1,<2.0.0
@@ -53,10 +54,11 @@ requirements:
     - google-cloud-vision >=0.35.2,<2.0.0
     - google-cloud-workflows >=0.1.0,<2.0.0
     - grpcio-gcp >=0.2.2
-    - json-merge-patch ~=0.2
-    - pandas-gbq
+    - json-merge-patch >=0.2,<0.3
+    - pandas-gbq<0.15.0
+    - plyvel
     - pyopenssl
-    - python >=3.6
+    
 
 test:
   imports:
