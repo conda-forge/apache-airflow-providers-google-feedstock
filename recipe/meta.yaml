@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "5.1.0" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: 3c2bedba047c7e52594e63ffcf048465f110f84e4222f37b5cbca2dfcf26f542
+  sha256: 2a98f14047257be6e1e73a3239fa67496b0f5fce3be401f76581ef2be86b63bb
 
 build:
   number: 0
@@ -31,9 +31,10 @@ requirements:
     - google-cloud-automl >=2.1.0,<3.0.0
     - google-cloud-bigquery-datatransfer >=3.0.0,<4.0.0
     - google-cloud-bigtable >=1.0.0,<2.0.0
+    - google-cloud-build >=3.0.0,<4.0.0
     - google-cloud-container >=0.1.1,<2.0.0
     - google-cloud-datacatalog >=3.0.0,<4.0.0
-    - google-cloud-dataproc >=2.2.0,<3.0.0
+    - google-cloud-dataproc >=2.2.0,<2.6.0
     - google-cloud-dlp >=0.11.0,<2.0.0
     - google-cloud-kms >=2.0.0,<3.0.0
     - google-cloud-language >=1.1.1,<2.0.0
@@ -55,7 +56,7 @@ requirements:
     - google-cloud-workflows >=0.1.0,<2.0.0
     - grpcio-gcp >=0.2.2
     - httpx
-    - json-merge-patch >=0.2,<0.3
+    - json-merge-patch >=0.2,<1
     - pandas-gbq <0.15.0
     - pyopenssl
 
