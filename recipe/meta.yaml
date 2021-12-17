@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "6.1.0" %}
+{% set version = "6.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: 2d28cb461323c8e3f0f8ac7c6c461bfa9c22784649ce445535656d5fdf5cf490
+  sha256: 31417138745626e7cbcc3da1d972da95c8033706d11323dcbf53560d34f51be6
 
 build:
   number: 0
@@ -34,6 +34,7 @@ requirements:
     - google-cloud-build >=3.0.0,<4.0.0
     - google-cloud-container >=0.1.1,<2.0.0
     - google-cloud-datacatalog >=3.0.0,<4.0.0
+    - google-cloud-dataproc-metastore >=1.2.0,<2.0.0
     - google-cloud-dataproc >=2.2.0,<4.0.0
     - google-cloud-dlp >=0.11.0,<2.0.0
     - google-cloud-kms >=2.0.0,<3.0.0
