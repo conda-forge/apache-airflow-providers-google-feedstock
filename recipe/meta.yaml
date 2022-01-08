@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "6.2.0" %}
+{% set version = "6.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: 31417138745626e7cbcc3da1d972da95c8033706d11323dcbf53560d34f51be6
+  sha256: b59c707a26a2afa95065a3c425004ac89bbefa74927bff1629effdfffcb2e669
 
 build:
   number: 0
@@ -16,12 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
-    - wheel
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
     - google-ads >=12.0.0,<14.0.1
     - google-api-core >=1.25.1,<3.0.0
@@ -35,7 +34,7 @@ requirements:
     - google-cloud-container >=0.1.1,<2.0.0
     - google-cloud-datacatalog >=3.0.0,<4.0.0
     - google-cloud-dataproc-metastore >=1.2.0,<2.0.0
-    - google-cloud-dataproc >=2.2.0,<4.0.0
+    - google-cloud-dataproc >=3.1.0,<4.0.0
     - google-cloud-dlp >=0.11.0,<2.0.0
     - google-cloud-kms >=2.0.0,<3.0.0
     - google-cloud-language >=1.1.1,<2.0.0
