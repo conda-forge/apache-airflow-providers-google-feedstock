@@ -10,9 +10,9 @@ source:
   sha256: d5e01ca23363f5aec9ac2ef348c67e1c4d6d93bbaaa58db19f31629573140de9
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -34,8 +34,9 @@ requirements:
     - google-cloud-build >=3.0.0
     - google-cloud-container >=0.1.1,<2.0.0
     - google-cloud-datacatalog >=3.0.0
-    - google-cloud-dataproc-metastore >=1.2.0,<2.0.0
+    - google-cloud-dataplex >=0.1.0
     - google-cloud-dataproc >=3.1.0
+    - google-cloud-dataproc-metastore >=1.2.0,<2.0.0
     - google-cloud-dlp >=0.11.0,<2.0.0
     - google-cloud-kms >=2.0.0
     - google-cloud-language >=1.1.1,<2.0.0
@@ -60,7 +61,7 @@ requirements:
     - httpx
     - json-merge-patch >=0.2
     - looker-sdk >=22.2.0
-    - pandas >=0.17.1,<1.4
+    - pandas >=0.17.1
     - pandas-gbq
     - pyopenssl
     - sqlalchemy-bigquery >=1.2.1
@@ -76,9 +77,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Google services for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-google package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
