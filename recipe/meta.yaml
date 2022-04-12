@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "6.7.0" %}
+{% set version = "6.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: d5e01ca23363f5aec9ac2ef348c67e1c4d6d93bbaaa58db19f31629573140de9
+  sha256: 52664b15202d9be998fbb57dd0f59e346257bce1d09008424c67bb573dc3638e
 
 build:
   noarch: python
@@ -79,7 +79,9 @@ about:
   home: https://airflow.apache.org/
   summary: Provider for Apache Airflow. Implements apache-airflow-providers-google package
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
   dev_url: https://github.com/apache/airflow/
