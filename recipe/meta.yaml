@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "8.2.0" %}
+{% set version = "8.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: 1cd0b35f1bda6c0d6d7df91e8b0087307c6429f6bc86b3d06e08f9ab07d63cae
+  sha256: 99c59f915ead855b3b74400d2bb709d6bd23ffa2d9b6c81aa275108687a8ac27
 
 build:
   noarch: python
@@ -22,9 +22,10 @@ requirements:
   run:
     - python >=3.7
     - apache-airflow >=2.2.0
-    - apache-airflow-providers-common-sql
+    - apache-airflow-providers-common-sql >=1.1.0
     - google-ads >=15.1.1
-    - google-api-core >=2.7.0,<3.0.0
+    # google-api-core has incorrect dependencies, and doesn't seem worth fixing
+    - google-api-core >=2.7.0,<3.0.0,!=2.10.0
     - google-api-python-client >=1.6.0,<2.0.0
     - google-auth >=1.0.0
     - google-auth-httplib2 >=0.0.1
@@ -35,6 +36,7 @@ requirements:
     - google-cloud-build >=3.0.0
     - google-cloud-container >=2.2.0,<3.0.0
     - google-cloud-datacatalog >=3.0.0
+    - google-cloud-dataform >=0.2.0
     - google-cloud-dataplex >=0.1.0
     - google-cloud-dataproc >=3.1.0
     - google-cloud-dataproc-metastore >=1.2.0,<2.0.0
