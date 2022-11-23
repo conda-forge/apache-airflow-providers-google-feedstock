@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "8.4.0" %}
+{% set version = "8.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: 5ddb93c1132140fb4d6bc08a188b72527c73db69fd97ddb31710707f2337fb12
+  sha256: dba1670ad3372c5e3715579f9007a83d20a0af23e6c795b4157b2f09ee897b01
 
 build:
   noarch: python
@@ -22,11 +22,12 @@ requirements:
   run:
     - python >=3.7
     - pyopenssl
-    - apache-airflow-providers-common-sql >=1.2.0
-    - apache-airflow >=2.2.0
+    - apache-airflow-providers-common-sql >=1.3.0
+    - apache-airflow >=2.3.0
     - asgiref >=3.5.2
     - gcloud-aio-bigquery >=6.1.2
     - gcloud-aio-storage
+    - gcloud-aio-auth >=4.0.0
     - google-ads >=15.1.1
     # google-api-core has incorrect dependencies, and doesn't seem worth fixing
     - google-api-core >=2.7.0,<3.0.0,!=2.10.0
@@ -38,6 +39,7 @@ requirements:
     - google-cloud-bigquery-datatransfer >=3.0.0
     - google-cloud-bigtable >=1.0.0,<2.0.0
     - google-cloud-build >=3.0.0
+    - google-cloud-compute >=0.1.0,<2.0.0
     - google-cloud-container >=2.2.0,<3.0.0
     - google-cloud-datacatalog >=3.0.0
     - google-cloud-dataform >=0.2.0
@@ -57,7 +59,7 @@ requirements:
     - google-cloud-secret-manager >=0.2.0,<2.0.0
     - google-cloud-spanner >=1.10.0,<2.0.0
     - google-cloud-speech >=0.36.3,<2.0.0
-    - google-cloud-storage >=1.30,<2.0.0
+    - google-cloud-storage >=1.30,<3.0.0
     - google-cloud-tasks >=2.0.0
     - google-cloud-texttospeech >=0.4.0,<2.0.0
     - google-cloud-translate >=1.5.0,<2.0.0
