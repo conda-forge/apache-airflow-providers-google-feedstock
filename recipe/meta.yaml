@@ -73,7 +73,7 @@ requirements:
     - proto-plus >=1.19.6
     - protobuf <=3.20.0
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
-    - googleapis-common-protos != 1.57.0
+    - googleapis-common-protos !=1.57.0
     - sqlalchemy-bigquery >=1.2.1
 
 test:
