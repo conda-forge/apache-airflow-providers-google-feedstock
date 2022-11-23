@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "8.3.0" %}
+{% set version = "8.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: 99c59f915ead855b3b74400d2bb709d6bd23ffa2d9b6c81aa275108687a8ac27
+  sha256: 5ddb93c1132140fb4d6bc08a188b72527c73db69fd97ddb31710707f2337fb12
 
 build:
   noarch: python
@@ -21,8 +21,12 @@ requirements:
     - setuptools
   run:
     - python >=3.7
+    - pyopenssl
+    - apache-airflow-providers-common-sql >=1.2.0
     - apache-airflow >=2.2.0
-    - apache-airflow-providers-common-sql >=1.1.0
+    - asgiref >=3.5.2
+    - gcloud-aio-bigquery >=6.1.2
+    - gcloud-aio-storage
     - google-ads >=15.1.1
     # google-api-core has incorrect dependencies, and doesn't seem worth fixing
     - google-api-core >=2.7.0,<3.0.0,!=2.10.0
@@ -67,7 +71,9 @@ requirements:
     - pandas >=0.17.1
     - pandas-gbq
     - proto-plus >=1.19.6
-    - pyopenssl
+    - protobuf <=3.20.0
+    # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
+    - googleapis-common-protos !=1.57.0
     - sqlalchemy-bigquery >=1.2.1
 
 test:
