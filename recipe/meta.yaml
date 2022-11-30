@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "8.5.0" %}
+{% set version = "8.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: dba1670ad3372c5e3715579f9007a83d20a0af23e6c795b4157b2f09ee897b01
+  sha256: fa14547e014bd7d7afd46797316a46e27d39fb7c467c081b3994376867e3eee2
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.7
     - pyopenssl
-    - apache-airflow-providers-common-sql >=1.3.0
+    - apache-airflow-providers-common-sql >=1.3.1
     - apache-airflow >=2.3.0
     - asgiref >=3.5.2
     - gcloud-aio-bigquery >=6.1.2
