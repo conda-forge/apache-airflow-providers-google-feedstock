@@ -37,7 +37,7 @@ requirements:
     - google-cloud-aiplatform >=1.7.1,<2.0.0
     - google-cloud-automl >=2.1.0
     - google-cloud-bigquery-datatransfer >=3.0.0
-    - google-cloud-bigtable >=1.0.0,<2.0.0
+    - google-cloud-bigtable >=2.0.0,<3.0.0
     - google-cloud-build >=3.0.0
     - google-cloud-compute >=0.1.0,<2.0.0
     - google-cloud-container >=2.2.0,<3.0.0
@@ -45,9 +45,9 @@ requirements:
     - google-cloud-dataflow-client >=0.5.2,<0.5.5
     - google-cloud-dataform >=0.2.0
     - google-cloud-dataplex >=0.1.0
-    - google-cloud-dataproc >=3.1.0
     - google-cloud-dataproc-metastore >=1.2.0,<2.0.0
-    - google-cloud-dlp >=0.11.0,<2.0.0
+    - google-cloud-dataproc >=3.1.0
+    - google-cloud-dlp >=3.0.0,<3.8.0
     - google-cloud-kms >=2.0.0
     - google-cloud-language >=1.1.1,<2.0.0
     - google-cloud-logging >=2.1.1
@@ -74,9 +74,6 @@ requirements:
     - pandas >=0.17.1
     - pandas-gbq
     - proto-plus >=1.19.6
-    - protobuf <=3.20.0
-    # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
-    - googleapis-common-protos !=1.57.0
     - sqlalchemy-bigquery >=1.2.1
 
 test:
