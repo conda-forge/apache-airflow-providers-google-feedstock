@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "8.10.0" %}
+{% set version = "8.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: f0764dd59dcbac038e2b0042acea1c6f267d2e75801e079b7b2c9ac0f4698559
+  sha256: b61f10e82a991a2c80be41887d5463f960f135b4362ee1df35d30fbf8f2a0ee6
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ requirements:
     - google-cloud-aiplatform >=1.7.1,<2.0.0
     - google-cloud-automl >=2.1.0
     - google-cloud-bigquery-datatransfer >=3.0.0
-    - google-cloud-bigtable >=1.0.0,<2.0.0
+    - google-cloud-bigtable >=2.0.0,<3.0.0
     - google-cloud-build >=3.0.0
     - google-cloud-compute >=0.1.0,<2.0.0
     - google-cloud-container >=2.2.0,<3.0.0
@@ -45,9 +45,9 @@ requirements:
     - google-cloud-dataflow-client >=0.5.2,<0.5.5
     - google-cloud-dataform >=0.2.0
     - google-cloud-dataplex >=0.1.0
-    - google-cloud-dataproc >=3.1.0
     - google-cloud-dataproc-metastore >=1.2.0,<2.0.0
-    - google-cloud-dlp >=0.11.0,<2.0.0
+    - google-cloud-dataproc >=3.1.0
+    - google-cloud-dlp >=3.0.0,<3.8.0
     - google-cloud-kms >=2.0.0
     - google-cloud-language >=1.1.1,<2.0.0
     - google-cloud-logging >=2.1.1
@@ -74,10 +74,10 @@ requirements:
     - pandas >=0.17.1
     - pandas-gbq
     - proto-plus >=1.19.6
-    - protobuf <=3.20.0
+    - sqlalchemy-bigquery >=1.2.1
+
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
     - googleapis-common-protos !=1.57.0
-    - sqlalchemy-bigquery >=1.2.1
 
 test:
   imports:
