@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "8.11.0" %}
+{% set version = "8.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: b61f10e82a991a2c80be41887d5463f960f135b4362ee1df35d30fbf8f2a0ee6
+  sha256: 85810cf9b3880f9a0b09ce439bb41b4c03c513a42a4e4b81d533bc947dc54742
 
 build:
   noarch: python
