@@ -71,13 +71,7 @@ requirements:
     - json-merge-patch >=0.2
     - looker-sdk >=22.2.0
     - pandas >=0.17.1
-<<<<<<< HEAD
-    - pandas-gbq
-    - proto-plus ==1.19.6
-    - protobuf !=3.18.*,!=3.19.*,<=3.20.0,>=3.12.0
-=======
     - proto-plus >=1.19.6
->>>>>>> c13af39 (Update recipe with changes from grayskull)
     - sqlalchemy-bigquery >=1.2.1
 
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
