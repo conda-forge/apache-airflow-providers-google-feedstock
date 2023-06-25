@@ -70,6 +70,7 @@ requirements:
     - httpx
     - json-merge-patch >=0.2
     - looker-sdk >=22.2.0
+    - pandas-gbq
     - pandas >=0.17.1
     - proto-plus >=1.19.6
     - sqlalchemy-bigquery >=1.2.1
