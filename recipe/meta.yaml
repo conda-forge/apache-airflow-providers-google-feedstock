@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.3.0" %}
+{% set version = "10.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: 2ae1ed735e0cc175c6e78ff2ab53f184987343aa32d19bd3ee66e9677601b75c
+  sha256: 721cad6beed8e25a58b422051c92639f04909cb93be353ea0027f79436f66c92
 
 build:
   noarch: python
@@ -59,6 +59,7 @@ requirements:
     - google-cloud-secret-manager >=2.16.0
     - google-cloud-spanner >=3.11.1
     - google-cloud-speech >=2.18.0
+    - google-cloud-storage-transfer >=1.4.1
     - google-cloud-storage >=2.7.0
     - google-cloud-tasks >=2.13.0
     - google-cloud-texttospeech >=2.14.1
