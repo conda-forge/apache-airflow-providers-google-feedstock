@@ -75,6 +75,7 @@ requirements:
     - pandas >=0.17.1
     - proto-plus >=1.19.6
     - sqlalchemy-bigquery >=1.2.1
+    - sqlalchemy-spanner >=1.6.2
 
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
     - googleapis-common-protos !=1.57.0
