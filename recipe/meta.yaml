@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.5.0" %}
+{% set version = "10.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: f821f8b1f0e160deb6328bcbde6b88216b9aaedb41583bf31111c22520cbd3ad
+  sha256: 2d801bb5f78ad2e5416632c1b5792b818e75a0dbccd1b6305e5193decce1947a
 
 build:
   noarch: python
@@ -44,7 +44,7 @@ requirements:
     - google-cloud-dataflow-client >=0.8.2
     - google-cloud-dataform >=0.5.0
     - google-cloud-dataplex >=1.4.2
-    - google-cloud-dataproc-metastore >=1.10.0
+    - google-cloud-dataproc-metastore >=1.12.0
     - google-cloud-dataproc >=5.4.0
     - google-cloud-dlp >=3.12.0
     - google-cloud-kms >=2.15.0
