@@ -35,6 +35,7 @@ requirements:
     - google-auth >=1.0.0
     - google-cloud-aiplatform >=1.22.1
     - google-cloud-automl >=2.11.0
+    - google-cloud-batch >=0.13.0
     - google-cloud-bigquery-datatransfer >=3.11.0
     - google-cloud-bigtable >=2.17.0
     - google-cloud-build >=3.13.0
@@ -56,6 +57,7 @@ requirements:
     - google-cloud-os-login >=2.9.1
     - google-cloud-pubsub >=2.15.0
     - google-cloud-redis >=2.12.0
+    - google-cloud-run >=0.9.0
     - google-cloud-secret-manager >=2.16.0
     - google-cloud-spanner >=3.11.1
     - google-cloud-speech >=2.18.0
