@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.11.1" %}
+{% set version = "10.12.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-google-{{ version }}.tar.gz
-  sha256: d279194c9025e075ed62a2aa7c7b775e88296b5c9f7ed2f6e6aa9d95188d8367
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
+  sha256: cedfd906b054036c2d0de40b9ecfa70d45828945b47313c37e9722ba275a9028
 
 build:
   noarch: python
@@ -16,8 +16,8 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
@@ -47,7 +47,7 @@ requirements:
     - google-cloud-dataform >=0.5.0
     - google-cloud-dataplex >=1.4.2
     - google-cloud-dataproc-metastore >=1.12.0
-    - google-cloud-dataproc >=5.4.0
+    - google-cloud-dataproc >=5.5.0
     - google-cloud-dlp >=3.12.0
     - google-cloud-kms >=2.15.0
     - google-cloud-language >=2.9.0
@@ -86,7 +86,6 @@ requirements:
 test:
   imports:
     - airflow.providers.google
-    - airflow.providers.google.ads
   commands:
     - pip check
   requires:
@@ -94,11 +93,9 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-google package
+  summary: Provider package apache-airflow-providers-google for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/google/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
   dev_url: https://github.com/apache/airflow/
