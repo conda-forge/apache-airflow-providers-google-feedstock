@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
   sha256: cedfd906b054036c2d0de40b9ecfa70d45828945b47313c37e9722ba275a9028
 
 build:
@@ -16,8 +16,8 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
@@ -86,19 +86,15 @@ requirements:
 test:
   imports:
     - airflow.providers.google
-    - airflow.providers.google.ads
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-google package
+  summary: Provider package apache-airflow-providers-google for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/google/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
   dev_url: https://github.com/apache/airflow/
