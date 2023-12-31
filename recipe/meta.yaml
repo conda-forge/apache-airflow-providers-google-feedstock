@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.12.0" %}
+{% set version = "10.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: cedfd906b054036c2d0de40b9ecfa70d45828945b47313c37e9722ba275a9028
+  sha256: 880388d26c9c01ecc3526dc15d21a79388a01093435ac3a3aa811a990d4ffe84
 
 build:
   noarch: python
@@ -23,40 +23,40 @@ requirements:
     - python >=3.8
     - pyopenssl
     - apache-airflow-providers-common-sql >=1.7.2
-    - apache-airflow >=2.5.0
+    - apache-airflow >=2.6.0
     - asgiref >=3.5.2
     - gcloud-aio-auth >=4.0.0,<5.0.0
     - gcloud-aio-bigquery >=6.1.2
-    - gcloud-aio-storage
-    - gcsfs >=2023.9.2
+    - gcloud-aio-storage >=9.0.0
+    - gcsfs >=2023.10.0
     - google-ads >=22.1.0
     - google-api-core >=2.11.0
     - google-api-python-client >=1.6.0
     - google-auth-httplib2 >=0.0.1
     - google-auth >=1.0.0
     - google-cloud-aiplatform >=1.22.1
-    - google-cloud-automl >=2.11.0
+    - google-cloud-automl >=2.12.0
     - google-cloud-batch >=0.13.0
-    - google-cloud-bigquery-datatransfer >=3.11.0
+    - google-cloud-bigquery-datatransfer >=3.13.0
     - google-cloud-bigtable >=2.17.0
-    - google-cloud-build >=3.13.0
+    - google-cloud-build >=3.22.0
     - google-cloud-compute >=1.10.0
     - google-cloud-container >=2.17.4
     - google-cloud-datacatalog >=3.11.1
-    - google-cloud-dataflow-client >=0.8.2
+    - google-cloud-dataflow-client >=0.8.6
     - google-cloud-dataform >=0.5.0
-    - google-cloud-dataplex >=1.4.2
+    - google-cloud-dataplex >=1.10.0
     - google-cloud-dataproc-metastore >=1.12.0
-    - google-cloud-dataproc >=5.5.0
+    - google-cloud-dataproc >=5.8.0
     - google-cloud-dlp >=3.12.0
     - google-cloud-kms >=2.15.0
     - google-cloud-language >=2.9.0
     - google-cloud-logging >=3.5.0
     - google-cloud-memcache >=1.7.0
-    - google-cloud-monitoring >=2.14.1
-    - google-cloud-orchestration-airflow >=1.7.0
+    - google-cloud-monitoring >=2.18.0
+    - google-cloud-orchestration-airflow >=1.10.0
     - google-cloud-os-login >=2.9.1
-    - google-cloud-pubsub >=2.15.0
+    - google-cloud-pubsub >=2.19.0
     - google-cloud-redis >=2.12.0
     - google-cloud-run >=0.9.0
     - google-cloud-secret-manager >=2.16.0
