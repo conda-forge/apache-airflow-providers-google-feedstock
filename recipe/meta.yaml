@@ -20,7 +20,6 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
-    - google-analytics-admin
     - python >=3.8
     - pyopenssl
     - apache-airflow-providers-common-sql >=1.7.2
