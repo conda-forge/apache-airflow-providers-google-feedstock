@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.14.0" %}
+{% set version = "10.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: 870c335febc52ede118dc6b09af52ea3ca85cddd3af6b7e92a37636ecb3ab128
+  sha256: ff48fa0a29abec2645a8008c47d0a84a759b7203412707a5e2fc01558c4052a3
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ requirements:
     - gcsfs >=2023.10.0
     - google-ads >=22.1.0
     - google-analytics-admin
-    - google-api-core >=2.11.0
+    - google-api-core >=2.11.0,!=2.16.0
     - google-api-python-client >=1.6.0
     - google-auth-httplib2 >=0.0.1
     - google-auth >=1.0.0
