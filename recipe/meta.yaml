@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.15.0" %}
+{% set version = "10.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: ff48fa0a29abec2645a8008c47d0a84a759b7203412707a5e2fc01558c4052a3
+  sha256: dde9ce5b6873558c92438fad3832a63345072736c69222de3246a1d7e6f109f1
 
 build:
   noarch: python
@@ -76,7 +76,7 @@ requirements:
     - json-merge-patch >=0.2
     - looker-sdk >=22.2.0
     - pandas-gbq
-    - pandas >=1.2.5
+    - pandas >=1.2.5,<2.2
     - proto-plus >=1.19.6
     - sqlalchemy-bigquery >=1.2.1
     - sqlalchemy-spanner >=1.6.2
