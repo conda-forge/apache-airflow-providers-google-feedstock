@@ -79,7 +79,7 @@ requirements:
     - json-merge-patch >=0.2
     - looker-sdk >=22.4.0
     - pandas-gbq >=0.7.0
-    - pandas >=1.2.5,<2.2
+    - pandas >=2.1.2,<2.2
     - proto-plus >=1.19.6
     - python-slugify >=7.0.0
     - sqlalchemy-bigquery >=1.2.1
