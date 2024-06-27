@@ -20,13 +20,12 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
-    - dill >=0.2.3
-    - tenacity >=8.1.0
     - python >=3.8
     - pyopenssl >=23.0.0
     - apache-airflow-providers-common-sql >=1.7.2
     - apache-airflow >=2.7.0
     - asgiref >=3.5.2
+    - dill >=0.2.3
     - gcloud-aio-auth >=4.0.0,<5.0.0
     - gcloud-aio-bigquery >=6.1.2
     - gcloud-aio-storage >=9.0.0
@@ -84,6 +83,7 @@ requirements:
     - python-slugify >=7.0.0
     - sqlalchemy-bigquery >=1.2.1
     - sqlalchemy-spanner >=1.6.2
+    - tenacity >=8.1.0
 
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
     - googleapis-common-protos !=1.57.0
