@@ -20,9 +20,9 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
-    - apache-airflow-providers-common-compat >=1.1.0
-    - python >=3.8
+    - python >=3.8,<4.dev0
     - pyopenssl >=23.0.0
+    - apache-airflow-providers-common-compat >=1.1.0
     - apache-airflow-providers-common-sql >=1.7.2
     - apache-airflow >=2.7.0
     - asgiref >=3.5.2
