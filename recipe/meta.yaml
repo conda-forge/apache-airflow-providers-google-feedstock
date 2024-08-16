@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.21.0" %}
+{% set version = "10.21.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: 263e476014abc23691c83185e4d405ce2aaa9d18e1e45aed22c5d299e17fcea2
+  sha256: 2ee62fe544726b8ca74846e9cca925f9dae89ebbb59aec96ed16bfedc41260a5
 
 build:
   noarch: python
@@ -20,8 +20,9 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
-    - python >=3.8
+    - python >=3.8,<4.dev0
     - pyopenssl >=23.0.0
+    - apache-airflow-providers-common-compat >=1.1.0
     - apache-airflow-providers-common-sql >=1.7.2
     - apache-airflow >=2.7.0
     - asgiref >=3.5.2
