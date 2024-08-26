@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.21.1" %}
+{% set version = "10.22.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: 2ee62fe544726b8ca74846e9cca925f9dae89ebbb59aec96ed16bfedc41260a5
+  sha256: 76f40da3ec78d0591af621589861edbe6e42f1d28542d1050d69ae19851b7fb1
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -24,10 +24,10 @@ requirements:
     - pyopenssl >=23.0.0
     - apache-airflow-providers-common-compat >=1.1.0
     - apache-airflow-providers-common-sql >=1.7.2
-    - apache-airflow >=2.7.0
+    - apache-airflow >=2.8.0
     - asgiref >=3.5.2
     - dill >=0.2.3
-    - gcloud-aio-auth >=4.0.0,<5.0.0
+    - gcloud-aio-auth >=5.2.0
     - gcloud-aio-bigquery >=6.1.2
     - gcloud-aio-storage >=9.0.0
     - gcsfs >=2023.10.0
