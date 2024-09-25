@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.22.0" %}
+{% set version = "10.23.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: 76f40da3ec78d0591af621589861edbe6e42f1d28542d1050d69ae19851b7fb1
+  sha256: 10e57aebc8b90fd8aa4d6fa8efc08572894e98ec12ece0d55da935a9fffda20c
 
 build:
   noarch: python
@@ -31,16 +31,16 @@ requirements:
     - gcloud-aio-bigquery >=6.1.2
     - gcloud-aio-storage >=9.0.0
     - gcsfs >=2023.10.0
-    - google-ads >=24.1.0
+    - google-ads >=25.0.0
     - google-analytics-admin >=0.9.0
     - google-api-core >=2.11.0,!=2.16.0,!=2.18.0
     - google-api-python-client >=2.0.2
     - google-auth-httplib2 >=0.0.1
     - google-auth >=2.29.0
-    - google-cloud-aiplatform >=1.57.0
+    - google-cloud-aiplatform >=1.63.0
     - google-cloud-automl >=2.12.0
     - google-cloud-batch >=0.13.0
-    - google-cloud-bigquery-core <3.21.0,>=3.4.0
+    - google-cloud-bigquery-core >=3.4.0,!=3.21.*,!=3.22.0,!=3.23.*
     - google-cloud-bigquery-datatransfer >=3.13.0
     - google-cloud-bigtable >=2.17.0
     - google-cloud-build >=3.22.0
@@ -51,7 +51,7 @@ requirements:
     - google-cloud-dataform >=0.5.0
     - google-cloud-dataplex >=1.10.0
     - google-cloud-dataproc-metastore >=1.12.0
-    - google-cloud-dataproc >=5.8.0
+    - google-cloud-dataproc >=5.12.0
     - google-cloud-dlp >=3.12.0
     - google-cloud-kms >=2.15.0
     - google-cloud-language >=2.9.0
@@ -64,7 +64,7 @@ requirements:
     - google-cloud-redis >=2.12.0
     - google-cloud-run >=0.10.0
     - google-cloud-secret-manager >=2.16.0
-    - google-cloud-spanner >=3.11.1
+    - google-cloud-spanner >=3.11.1,!=3.49.0
     - google-cloud-speech >=2.18.0
     - google-cloud-storage-transfer >=1.4.1
     - google-cloud-storage >=2.7.0
@@ -76,6 +76,7 @@ requirements:
     - google-cloud-workflows >=1.10.0
     - grpcio-gcp >=0.2.2
     - httpx >=0.25.0
+    - immutabledict >=4.2.0
     - json-merge-patch >=0.2
     - looker-sdk >=22.4.0
     - pandas-gbq >=0.7.0
