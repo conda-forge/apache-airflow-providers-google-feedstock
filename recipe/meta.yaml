@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.24.0" %}
+{% set version = "10.25.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: dbf6f0e5739ed06b7649fae1944fc74fc4a2d746943bcb81440112106040a480
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
+  sha256: ca139f2a16cbeb8cc2d42a1707f8454ed9c6f2ef47326d880b94edbb9080ec00
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.9,<4.dev0
     - pyopenssl >=23.0.0
-    - apache-airflow-providers-common-compat >=1.1.0
+    - apache-airflow-providers-common-compat >=1.2.1
     - apache-airflow-providers-common-sql >=1.7.2
     - apache-airflow >=2.8.0
     - asgiref >=3.5.2
@@ -37,7 +37,7 @@ requirements:
     - google-api-python-client >=2.0.2
     - google-auth-httplib2 >=0.0.1
     - google-auth >=2.29.0
-    - google-cloud-aiplatform >=1.63.0
+    - google-cloud-aiplatform >=1.70.0
     - google-cloud-automl >=2.12.0
     - google-cloud-batch >=0.13.0
     - google-cloud-bigquery-core >=3.4.0,!=3.21.*,!=3.22.0,!=3.23.*
@@ -78,10 +78,11 @@ requirements:
     - httpx >=0.25.0
     - immutabledict >=4.2.0
     - json-merge-patch >=0.2
-    - looker-sdk >=22.4.0
+    - looker-sdk >=22.4.0,!=24.18.0
     - pandas-gbq >=0.7.0
     - pandas >=2.1.2,<2.2
     - proto-plus >=1.19.6
+    - pyarrow >=14.0.1
     - python-slugify >=7.0.0
     - sqlalchemy-bigquery >=1.2.1
     - sqlalchemy-spanner >=1.6.2
