@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
   sha256: ca139f2a16cbeb8cc2d42a1707f8454ed9c6f2ef47326d880b94edbb9080ec00
 
 build:
@@ -20,7 +20,6 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
-    - pyarrow >=14.0.1
     - python >=3.9,<4.dev0
     - pyopenssl >=23.0.0
     - apache-airflow-providers-common-compat >=1.2.1
@@ -83,6 +82,7 @@ requirements:
     - pandas-gbq >=0.7.0
     - pandas >=2.1.2,<2.2
     - proto-plus >=1.19.6
+    - pyarrow >=14.0.1
     - python-slugify >=7.0.0
     - sqlalchemy-bigquery >=1.2.1
     - sqlalchemy-spanner >=1.6.2
