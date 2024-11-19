@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.9,<4.dev0
+    - python >={{ python_min }}
     - pyopenssl >=23.0.0
     - apache-airflow-providers-common-compat >=1.2.1
     - apache-airflow-providers-common-sql >=1.20.0
@@ -97,6 +97,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
