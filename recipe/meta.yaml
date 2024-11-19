@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "10.25.0" %}
+{% set version = "10.26.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: ca139f2a16cbeb8cc2d42a1707f8454ed9c6f2ef47326d880b94edbb9080ec00
+  sha256: 04477b9a66b5fb964d8b0b6bee6109bd505fbc84780b024018a7e0b8aaf741c0
 
 build:
   noarch: python
@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.dev0
-    - flit-core >=3.2,<4
+    - python {{ python_min }}
+    - flit-core ==3.10.1
     - pip
   run:
-    - python >=3.9,<4.dev0
+    - python >={{ python_min }}
     - pyopenssl >=23.0.0
     - apache-airflow-providers-common-compat >=1.2.1
-    - apache-airflow-providers-common-sql >=1.7.2
+    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.8.0
     - asgiref >=3.5.2
     - dill >=0.2.3
@@ -31,7 +31,7 @@ requirements:
     - gcloud-aio-bigquery >=6.1.2
     - gcloud-aio-storage >=9.0.0
     - gcsfs >=2023.10.0
-    - google-ads >=25.0.0
+    - google-ads >=25.1.0
     - google-analytics-admin >=0.9.0
     - google-api-core >=2.11.0,!=2.16.0,!=2.18.0
     - google-api-python-client >=2.0.2
@@ -97,6 +97,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
