@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "11.0.0" %}
+{% set version = "12.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: c82c1358808b1d23e7834de0d3ce27d45b7344487bc2fb31537ebf9c711f7d88
+  sha256: 17669896ab7298d1140fcbe7ba5e879562aa709e3f58e511a8343962b6077f54
 
 build:
   noarch: python
@@ -20,11 +20,12 @@ requirements:
     - flit-core ==3.10.1
     - pip
   run:
+    - google-cloud-alloydb
     - python >={{ python_min }}
     - pyopenssl >=23.0.0
-    - apache-airflow-providers-common-compat >=1.2.1
+    - apache-airflow-providers-common-compat >=1.3.0
     - apache-airflow-providers-common-sql >=1.20.0
-    - apache-airflow >=2.8.0
+    - apache-airflow >=2.9.0
     - asgiref >=3.5.2
     - dill >=0.2.3
     - gcloud-aio-auth >=5.2.0
@@ -37,7 +38,7 @@ requirements:
     - google-api-python-client >=2.0.2
     - google-auth-httplib2 >=0.0.1
     - google-auth >=2.29.0
-    - google-cloud-aiplatform >=1.70.0
+    - google-cloud-aiplatform >=1.73.0
     - google-cloud-automl >=2.12.0
     - google-cloud-batch >=0.13.0
     - google-cloud-bigquery-core >=3.4.0,!=3.21.*,!=3.22.0,!=3.23.*
