@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "14.1.0" %}
+{% set version = "15.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: aedb503d2d8dbf960ebc5b74b910643e433b859490e76e1ca3b322203925b86d
+  sha256: 88b704b000ee6e3d7d3274f6cacf700413c17f0719e1056188d3a37a71a2528d
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - types-protobuf !=5.29.1.20250402
     - python >={{ python_min }}
     - apache-airflow >=2.9.0
     - apache-airflow-providers-common-compat >=1.4.0
