@@ -20,7 +20,6 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
-    - types-protobuf !=5.29.1.20250402
     - python >={{ python_min }}
     - apache-airflow >=2.9.0
     - apache-airflow-providers-common-compat >=1.4.0
@@ -89,6 +88,7 @@ requirements:
     - sqlalchemy-spanner >=1.6.2
     - tenacity >=8.1.0
     - immutabledict >=4.2.0
+    - types-protobuf !=5.29.1.20250402
 
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
     - googleapis-common-protos !=1.57.0
@@ -105,8 +105,11 @@ test:
 about:
   home: https://airflow.apache.org/
   summary: Provider package apache-airflow-providers-google for Apache Airflow
-  license: Apache-2.0
-  license_file: src/airflow/providers/google/LICENSE
+  license: Apache-2.0 AND MIT AND BSD-3-Clause
+  license_file:
+    - src/airflow/providers/google/LICENSE
+    - src/airflow/providers/google/3rd-party-licenses/LICENSES.txt
+    - src/airflow/providers/google/3rd-party-licenses/NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
   dev_url: https://github.com/apache/airflow/
