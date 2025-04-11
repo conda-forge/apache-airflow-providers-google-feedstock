@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "14.1.0" %}
+{% set version = "15.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: aedb503d2d8dbf960ebc5b74b910643e433b859490e76e1ca3b322203925b86d
+  sha256: 88b704b000ee6e3d7d3274f6cacf700413c17f0719e1056188d3a37a71a2528d
 
 build:
   noarch: python
@@ -88,6 +88,7 @@ requirements:
     - sqlalchemy-spanner >=1.6.2
     - tenacity >=8.1.0
     - immutabledict >=4.2.0
+    - types-protobuf !=5.29.1.20250402
 
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
     - googleapis-common-protos !=1.57.0
@@ -104,8 +105,11 @@ test:
 about:
   home: https://airflow.apache.org/
   summary: Provider package apache-airflow-providers-google for Apache Airflow
-  license: Apache-2.0
-  license_file: src/airflow/providers/google/LICENSE
+  license: Apache-2.0 AND MIT AND BSD-3-Clause
+  license_file:
+    - src/airflow/providers/google/LICENSE
+    - src/airflow/providers/google/3rd-party-licenses/LICENSES.txt
+    - src/airflow/providers/google/3rd-party-licenses/NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
   dev_url: https://github.com/apache/airflow/
