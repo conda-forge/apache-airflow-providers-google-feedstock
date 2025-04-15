@@ -105,7 +105,7 @@ test:
 about:
   home: https://airflow.apache.org/
   summary: Provider package apache-airflow-providers-google for Apache Airflow
-  license: Apache-2.0 AND MIT AND BSD-3-Clause
+  license: BSD-3-Clause AND MIT AND Apache-2.0
   license_file:
     - src/airflow/providers/google/LICENSE
     - src/airflow/providers/google/3rd-party-licenses/LICENSES.txt
