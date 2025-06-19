@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "15.1.0" %}
+{% set version = "16.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: c0a12567c8bc9f248af0026820207386f12b94eccab4e34568e5529aeb3a7d4b
+  sha256: 98509eff6168f20394725e17eed87f3c2c13fb5a30ea932184ca5744d58ffb5e
 
 build:
   noarch: python
@@ -21,9 +21,9 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.9.0
+    - apache-airflow >=2.10.0
     - apache-airflow-providers-common-compat >=1.4.0
-    - apache-airflow-providers-common-sql >=1.20.0
+    - apache-airflow-providers-common-sql >=1.27.0
     - asgiref >=3.5.2
     - dill >=0.2.3
     - gcloud-aio-auth >=5.2.0
@@ -86,9 +86,9 @@ requirements:
     - pyopenssl >=23.0.0
     - sqlalchemy-bigquery >=1.2.1
     - sqlalchemy-spanner >=1.6.2
-    - tenacity >=8.1.0
+    - tenacity >=8.3.0
     - immutabledict >=4.2.0
-    - types-protobuf !=5.29.1.20250402
+    - types-protobuf !=5.29.1.20250402,>=5.27.0
 
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
     - googleapis-common-protos !=1.57.0
