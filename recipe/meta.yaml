@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "16.1.0" %}
+{% set version = "17.0.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: 3e42977cd26098f347f35128c72afe821f6df75bb5bbd2a2155c18836d3273be
+  sha256: 0d5dcad9f09ea273c1c40889617f0f4cfa51870391890518c00b38c05781aa27
 
 build:
   noarch: python
@@ -21,6 +21,8 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - google-cloud-bigquery-storage >=2.31.0
+    - ray >=2.42.0
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - apache-airflow-providers-common-compat >=1.4.0
@@ -66,8 +68,8 @@ requirements:
     - google-cloud-secret-manager >=2.16.0
     - google-cloud-spanner >=3.50.0
     - google-cloud-speech >=2.18.0
-    - google-cloud-storage >=2.7.0
-    - google-cloud-storage-transfer >=1.4.1
+    - google-cloud-storage >=2.9.0
+    - google-cloud-storage-transfer >=1.13.0
     - google-cloud-tasks >=2.13.0
     - google-cloud-texttospeech >=2.14.1
     - google-cloud-translate >=3.16.0
@@ -80,8 +82,8 @@ requirements:
     - httpx >=0.25.0
     - looker-sdk >=22.4.0,!=24.18.0
     - pandas-gbq >=0.7.0
-    - pandas >=2.1.2,<2.2
-    - proto-plus >=1.19.6
+    - pandas >=2.1.2
+    - proto-plus >=1.26.0
     - pyarrow >=16.1.0
     - python-slugify >=7.0.0
     - pyopenssl >=23.0.0
