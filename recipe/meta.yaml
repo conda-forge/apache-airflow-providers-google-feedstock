@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-google" %}
-{% set version = "16.1.0" %}
+{% set version = "17.0.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
-  sha256: 3e42977cd26098f347f35128c72afe821f6df75bb5bbd2a2155c18836d3273be
+  sha256: 0d5dcad9f09ea273c1c40889617f0f4cfa51870391890518c00b38c05781aa27
 
 build:
   noarch: python
@@ -38,10 +38,21 @@ requirements:
     - google-auth >=2.29.0
     - google-auth-httplib2 >=0.0.1
     - google-cloud-aiplatform >=1.73.0
+
+    # google-cloud-aiplatform[evaluation]
+    - pandas >=1.0.0
+    # more restrictive for python <= 3.10
+    - scikit-learn <1.6.0
+    - jsonschema
+    - ruamel.yaml
+    - pyyaml
+    - litellm >=1.72.4
+
     - google-cloud-alloydb >=0.4.0
     - google-cloud-automl >=2.12.0
     - google-cloud-bigquery-core >=3.24.0
     - google-cloud-bigquery-datatransfer >=3.13.0
+    - google-cloud-bigquery-storage >=2.31.0
     - google-cloud-bigtable >=2.17.0
     - google-cloud-build >=3.31.0
     - google-cloud-compute >=1.10.0
@@ -66,8 +77,8 @@ requirements:
     - google-cloud-secret-manager >=2.16.0
     - google-cloud-spanner >=3.50.0
     - google-cloud-speech >=2.18.0
-    - google-cloud-storage >=2.7.0
-    - google-cloud-storage-transfer >=1.4.1
+    - google-cloud-storage >=2.9.0
+    - google-cloud-storage-transfer >=1.13.0
     - google-cloud-tasks >=2.13.0
     - google-cloud-texttospeech >=2.14.1
     - google-cloud-translate >=3.16.0
@@ -80,11 +91,15 @@ requirements:
     - httpx >=0.25.0
     - looker-sdk >=22.4.0,!=24.18.0
     - pandas-gbq >=0.7.0
-    - pandas >=2.1.2,<2.2
-    - proto-plus >=1.19.6
-    - pyarrow >=16.1.0
+    # more restrictive constraints for python >= 3.13
+    - pandas >=2.2.3
+    - proto-plus >=1.26.0
+    # more restrictive constraints for python >= 3.13
+    - pyarrow >=18.0.0
     - python-slugify >=7.0.0
     - pyopenssl >=23.0.0
+    - ray-default >=2.42.0
+
     - sqlalchemy-bigquery >=1.2.1
     - sqlalchemy-spanner >=1.6.2
     - tenacity >=8.3.0
@@ -93,6 +108,9 @@ requirements:
 
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
     - googleapis-common-protos !=1.57.0
+
+    # earlier versions ahve incorrect dependencies that don't seem worth fixing
+    - opentelemetry-exporter-prometheus >=0.56b0
 
 test:
   imports:
