@@ -109,6 +109,9 @@ requirements:
     # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
     - googleapis-common-protos !=1.57.0
 
+    # earlier versions ahve incorrect dependencies that don't seem worth fixing
+    - opentelemetry-exporter-prometheus >=0.56b0
+
 test:
   imports:
     - airflow.providers.google
