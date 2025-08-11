@@ -37,7 +37,7 @@ requirements:
     - google-api-python-client >=2.0.2
     - google-auth >=2.29.0
     - google-auth-httplib2 >=0.0.1
-    - google-cloud-aiplatform >=1.73.0
+    - google-cloud-aiplatform >=1.98.0
 
     # google-cloud-aiplatform[evaluation]
     - pandas >=1.0.0
