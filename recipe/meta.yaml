@@ -37,21 +37,14 @@ requirements:
     - google-auth >=2.29.0
     - google-auth-httplib2 >=0.0.1
     - google-cloud-aiplatform >=1.98.0
-
-    # google-cloud-aiplatform[evaluation]
-    - pandas >=1.0.0
-    # more restrictive for python <= 3.10
-    - scikit-learn <1.6.0
-    - jsonschema
-    - ruamel.yaml
-    - pyyaml
-    - litellm >=1.72.4
-
+    # more restrictive for python <3.13
+    - ray >=2.42.0
+    # more restrictive for python <3.13
+    - google-cloud-bigquery-storage >=2.31.0
     - google-cloud-alloydb >=0.4.0
     - google-cloud-automl >=2.12.0
-    - google-cloud-bigquery-core >=3.24.0
+    - google-cloud-bigquery >=3.24.0
     - google-cloud-bigquery-datatransfer >=3.13.0
-    - google-cloud-bigquery-storage >=2.31.0
     - google-cloud-bigtable >=2.17.0
     - google-cloud-build >=3.31.0
     - google-cloud-compute >=1.10.0
@@ -90,26 +83,18 @@ requirements:
     - httpx >=0.25.0
     - looker-sdk >=22.4.0,!=24.18.0
     - pandas-gbq >=0.7.0
-    # more restrictive constraints for python >= 3.13
+    # more restrictive for python >=3.13
     - pandas >=2.2.3
     - proto-plus >=1.26.0
-    # more restrictive constraints for python >= 3.13
+    # more restrictive for python >=3.13
     - pyarrow >=18.0.0
     - python-slugify >=7.0.0
-    - pyopenssl >=23.0.0
-    - ray-default >=2.42.0
-
+    - PyOpenSSL >=23.0.0
     - sqlalchemy-bigquery >=1.2.1
     - sqlalchemy-spanner >=1.6.2
     - tenacity >=8.3.0
     - immutabledict >=4.2.0
     - types-protobuf !=5.29.1.20250402,>=5.27.0
-
-    # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
-    - googleapis-common-protos !=1.57.0
-
-    # earlier versions ahve incorrect dependencies that don't seem worth fixing
-    - opentelemetry-exporter-prometheus >=0.56b0
 
 test:
   imports:
@@ -121,13 +106,12 @@ test:
     - pip
 
 about:
-  home: https://airflow.apache.org/
+  home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-google for Apache Airflow
-  license: Apache-2.0 AND BSD-3-Clause AND MIT
+  license: Apache-2.0
   license_file:
-    - src/airflow/providers/google/LICENSE
-    - src/airflow/providers/google/3rd-party-licenses/LICENSES.txt
-    - src/airflow/providers/google/3rd-party-licenses/NOTICE
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
   dev_url: https://github.com/apache/airflow/
