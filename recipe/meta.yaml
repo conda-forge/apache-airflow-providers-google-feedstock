@@ -37,13 +37,22 @@ requirements:
     - google-auth >=2.29.0
     - google-auth-httplib2 >=0.0.1
     - google-cloud-aiplatform >=1.98.0
+
+    # google-cloud-aiplatform[evaluation]
+    - pandas >=1.0.0
+    - scikit-learn <1.6.0
+    - jsonschema
+    - ruamel.yaml
+    - pyyaml
+    - litellm >=1.72.4
+
     # more restrictive for python <3.13
     - ray >=2.42.0
     # more restrictive for python <3.13
     - google-cloud-bigquery-storage >=2.31.0
     - google-cloud-alloydb >=0.4.0
     - google-cloud-automl >=2.12.0
-    - google-cloud-bigquery >=3.24.0
+    - google-cloud-bigquery-core >=3.24.0
     - google-cloud-bigquery-datatransfer >=3.13.0
     - google-cloud-bigtable >=2.17.0
     - google-cloud-build >=3.31.0
@@ -89,7 +98,7 @@ requirements:
     # more restrictive for python >=3.13
     - pyarrow >=18.0.0
     - python-slugify >=7.0.0
-    - PyOpenSSL >=23.0.0
+    - pyopenssl >=23.0.0
     - sqlalchemy-bigquery >=1.2.1
     - sqlalchemy-spanner >=1.6.2
     - tenacity >=8.3.0
