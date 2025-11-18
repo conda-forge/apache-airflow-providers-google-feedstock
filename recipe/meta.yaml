@@ -47,7 +47,7 @@ requirements:
     - litellm >=1.72.4
 
     # more restrictive for python <3.13
-    - ray >=2.42.0
+    - ray-default >=2.42.0
     # more restrictive for python <3.13
     - google-cloud-bigquery-storage >=2.31.0
     - google-cloud-alloydb >=0.4.0
