@@ -3,9 +3,9 @@ About apache-airflow-providers-google-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/apache-airflow-providers-google-feedstock/blob/main/LICENSE.txt)
 
-Home: https://airflow.apache.org/
+Home: https://github.com/apache/airflow/
 
-Package license: Apache-2.0 AND BSD-3-Clause AND MIT
+Package license: Apache-2.0
 
 Summary: Provider package apache-airflow-providers-google for Apache Airflow
 
