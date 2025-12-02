@@ -21,8 +21,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.10.0
-    - apache-airflow-providers-common-compat >=1.8.0
+    - apache-airflow >=2.11.0
+    - apache-airflow-providers-common-compat >=1.10.0
     - apache-airflow-providers-common-sql >=1.27.0
     - asgiref >=3.5.2
     - dill >=0.2.3
@@ -104,12 +104,6 @@ requirements:
     - tenacity >=8.3.0
     - immutabledict >=4.2.0
     - types-protobuf !=5.29.1.20250402,>=5.27.0
-
-    # googleapis-common-protos 1.57.0 has incorrect dependencies and doesn't seem worth fixing
-    - googleapis-common-protos !=1.57.0
-
-    # earlier versions have incorrect dependencies that don't seem worth fixing
-    - opentelemetry-exporter-prometheus >=0.56b0
 
 test:
   imports:
