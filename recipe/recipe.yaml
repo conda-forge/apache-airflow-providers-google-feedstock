@@ -1,28 +1,29 @@
-{% set name = "apache-airflow-providers-google" %}
-{% set version = "19.3.0" %}
+context:
+  name: apache-airflow-providers-google
+  version: "19.3.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_google-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_google-${{ version }}.tar.gz
   sha256: 48479aaa7a944079bf809f374df76449c7599f72a82e4b69961329c088af6eda
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: python -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
-    - flit-core ==3.12.0
+    - python ${{ python_min }}.*
     - pip
+    - flit-core ==3.12.0
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - apache-airflow >=2.11.0
-    - apache-airflow-providers-common-compat >=1.10.0
+    - apache-airflow-providers-common-compat >=1.10.1
     - apache-airflow-providers-common-sql >=1.27.0
     - asgiref >=3.5.2
     - dill >=0.2.3
@@ -73,7 +74,7 @@ requirements:
     - google-cloud-monitoring >=2.18.0
     - google-cloud-orchestration-airflow >=1.10.0
     - google-cloud-os-login >=2.9.1
-    - google-cloud-pubsub >=2.21.3
+    - google-cloud-pubsub >=2.24.0
     - google-cloud-redis >=2.12.0
     - google-cloud-secret-manager >=2.16.0
     - google-cloud-spanner >=3.50.0
@@ -105,25 +106,22 @@ requirements:
     - immutabledict >=4.2.0
     - types-protobuf !=5.29.1.20250402,>=5.27.0
 
-test:
-  imports:
-    - airflow.providers.google
-  commands:
-    - pip check
-  requires:
-    - python {{ python_min }}
-    - pip
+tests:
+  - python:
+      imports:
+      - airflow.providers.google
+      pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
-  home: https://github.com/apache/airflow/
+  homepage: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-google for Apache Airflow
   license: Apache-2.0
   license_file:
     - LICENSE
     - NOTICE
-  license_family: Apache
-  doc_url: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
-  dev_url: https://github.com/apache/airflow/
+  documentation: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
+  repository: https://github.com/apache/airflow/
 
 extra:
   recipe-maintainers:
