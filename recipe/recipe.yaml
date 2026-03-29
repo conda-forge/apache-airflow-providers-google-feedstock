@@ -1,8 +1,6 @@
-schema_version: 1
-
 context:
   name: apache-airflow-providers-google
-  version: "19.1.0"
+  version: "21.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,27 +8,28 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_google-${{ version }}.tar.gz
-  sha256: 2df4df33af8f1af54d3e993f25e0a06129e157f09e9655d5291ec4df242641a7
+  sha256: 59d02deb93d1da6524034140ff3867b80161833b30a3a63014f552cfdd4b7235
 
 build:
-  number: 1
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: python -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
     - python ${{ python_min }}.*
-    - flit-core ==3.12.0
     - pip
+    - flit-core ==3.12.0
   run:
     - python >=${{ python_min }}
     # temporarily constrain to earlier airflow and task-sdk to prevent solver troubles
     - apache-airflow >=2.11.0,<3.1.3
     - apache-airflow-task-sdk <1.1.3
     
-    - apache-airflow-providers-common-compat >=1.10.0
-    - apache-airflow-providers-common-sql >=1.27.0
-    - asgiref >=3.5.2
+    - apache-airflow-providers-common-compat >=1.13.0
+    - apache-airflow-providers-common-sql >=1.32.0
+    # more restrictive for python >=3.14
+    - asgiref >=3.11.1
     - dill >=0.2.3
     - gcloud-aio-auth >=5.2.0
     - gcloud-aio-bigquery >=6.1.2
@@ -43,19 +42,20 @@ requirements:
     - google-auth >=2.29.0
     - google-auth-httplib2 >=0.0.1
     - google-cloud-aiplatform >=1.98.0
-
-    # google-cloud-aiplatform[evaluation]
+    # start google-cloud-aiplatform[evaluation]
     - pandas >=1.0.0
     - scikit-learn <1.6.0
     - jsonschema
     - ruamel.yaml
     - pyyaml
     - litellm >=1.72.4
-
-    # more restrictive for python <3.13
-    - ray-default >=2.42.0
-    # more restrictive for python <3.13
-    - google-cloud-bigquery-storage >=2.31.0
+    # end google-cloud-aiplatform[evaluation]
+    # more restrictive for python >=3.13
+    - ray-default >=2.49.0
+    # start ray[default]
+    # end ray[default]
+    # more restrictive for python >=3.13
+    - google-cloud-bigquery-storage >=2.33.0
     - google-cloud-alloydb >=0.4.0
     - google-cloud-automl >=2.12.0
     - google-cloud-bigquery-core >=3.24.0
@@ -68,7 +68,7 @@ requirements:
     - google-cloud-dataflow-client >=0.8.6
     - google-cloud-dataform >=0.5.0
     - google-cloud-dataplex >=2.6.0
-    - google-cloud-dataproc >=5.21.0
+    - google-cloud-dataproc >=5.25.0
     - google-cloud-dataproc-metastore >=1.12.0
     - google-cloud-dlp >=3.12.0
     - google-cloud-kms >=2.15.0
@@ -79,7 +79,7 @@ requirements:
     - google-cloud-monitoring >=2.18.0
     - google-cloud-orchestration-airflow >=1.10.0
     - google-cloud-os-login >=2.9.1
-    - google-cloud-pubsub >=2.21.3
+    - google-cloud-pubsub >=2.24.0
     - google-cloud-redis >=2.12.0
     - google-cloud-secret-manager >=2.16.0
     - google-cloud-spanner >=3.50.0
@@ -98,13 +98,12 @@ requirements:
     - httpx >=0.25.0
     - looker-sdk >=22.4.0,!=24.18.0
     - pandas-gbq >=0.7.0
-    # more restrictive for python >=3.13
-    - pandas >=2.2.3
+    # more restrictive for python >=3.14
+    - pandas >=2.3.3
     - proto-plus >=1.26.0
-    # more restrictive for python >=3.13
-    - pyarrow >=18.0.0
+    # more restrictive for python >=3.14
+    - pyarrow >=22.0.0
     - python-slugify >=7.0.0
-    - pyopenssl >=23.0.0
     - sqlalchemy-bigquery >=1.2.1
     - sqlalchemy-spanner >=1.6.2
     - tenacity >=8.3.0
@@ -116,17 +115,19 @@ tests:
       imports:
         - airflow.providers.google
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
+  homepage: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-google for Apache Airflow
   license: Apache-2.0
   license_file:
     - LICENSE
     - NOTICE
-  homepage: https://github.com/apache/airflow/
-  repository: https://github.com/apache/airflow/
   documentation: https://airflow.apache.org/docs/apache-airflow-providers-google/stable/index.html
+  repository: https://github.com/apache/airflow/
 
 extra:
   recipe-maintainers:
