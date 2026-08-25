@@ -47,11 +47,11 @@ requirements:
     - google-cloud-aiplatform >=1.164.0
     # start google-cloud-aiplatform[evaluation]
     - tqdm >=4.23.0
-    - scikit-learn <1.6.0
+    - scikit-learn
     - jsonschema
     - ruamel.yaml
     - pyyaml
-    - litellm >=1.93.0,<1.97.0
+    - litellm >=1.98.0
     # end google-cloud-aiplatform[evaluation]
 
     # tightest of upstream's floors (python >=3.14,<3.15)
