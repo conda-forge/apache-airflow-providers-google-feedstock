@@ -3,6 +3,8 @@ schema_version: 1
 context:
   name: apache-airflow-providers-google
   version: "22.4.0"
+  # required because no compatible litellm is available for python < 3.11
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
