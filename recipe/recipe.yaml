@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: apache-airflow-providers-google
-  version: "22.6.0"
+  version: "22.7.0"
   # required because no compatible litellm is available for python < 3.11
   python_min: "3.11"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_google-${{ version }}.tar.gz
-  sha256: 662a82b691a85f4d8a2b924d95598050775fd518ff5e046fc6cef4fa34a3a0f3
+  sha256: ce6804c37fa168286d969cd80b50cb6b276ee543c31e43fa662bcd2e87a027a2
 
 build:
   number: 0
