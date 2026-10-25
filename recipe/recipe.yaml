@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: apache-airflow-providers-google
-  version: "22.7.0"
+  version: "22.8.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_google-${{ version }}.tar.gz
-  sha256: ce6804c37fa168286d969cd80b50cb6b276ee543c31e43fa662bcd2e87a027a2
+  sha256: 654006dc73478b36f9e4bda0f00e45ba4b864f68da66653fbc77a9ece460a79d
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
 
-    - apache-airflow-providers-common-compat >=1.13.0
+    - apache-airflow-providers-common-compat >=1.23.0
     - apache-airflow-providers-common-sql >=1.32.0
     # tightest of upstream's floors (python >=3.14)
     - asgiref >=3.11.1
@@ -38,7 +38,7 @@ requirements:
     - google-ads >=26.0.0,!=28.0.0.post2
     - google-analytics-admin >=0.9.0
     - google-api-core >=2.30.3
-    - google-api-python-client >=2.193.0
+    - google-api-python-client >=2.194.0
     - google-auth >=2.29.0
     - google-auth-httplib2 >=0.0.1
     - google-genai >=2.8.0
@@ -59,17 +59,17 @@ requirements:
     - google-cloud-automl >=2.19.0
     - google-cloud-bigquery-core >=3.41.0
     - google-cloud-bigquery-datatransfer >=3.22.0
-    - google-cloud-bigtable >=2.35.0
+    - google-cloud-bigtable >=2.36.0
     - google-cloud-build >=3.36.0
     - google-cloud-compute >=1.47.0
     - google-cloud-container >=2.64.0
     - google-cloud-datacatalog >=3.30.0
-    - google-cloud-dataflow-client >=0.12.0
+    - google-cloud-dataflow-client >=0.13.0
     - google-cloud-dataform >=0.10.0
     - google-cloud-dataplex >=2.18.0
     - google-cloud-dataproc >=5.27.0
     - google-cloud-dataproc-metastore >=1.22.0
-    - google-cloud-dlp >=3.35.0
+    - google-cloud-dlp >=3.36.0
     - google-cloud-kms >=3.12.0
     - google-cloud-language >=2.20.0
     - google-cloud-logging >=3.15.0
@@ -78,16 +78,16 @@ requirements:
     - google-cloud-monitoring >=2.30.0
     - google-cloud-orchestration-airflow >=1.20.0
     - google-cloud-os-login >=2.20.0
-    - google-cloud-pubsub >=2.36.0
+    - google-cloud-pubsub >=2.37.0
     - google-cloud-redis >=2.21.0
     - google-cloud-secret-manager >=2.27.0
-    - google-cloud-spanner >=3.63.0
+    - google-cloud-spanner >=3.65.0
     - google-cloud-speech >=2.38.0
     - google-cloud-storage >=3.10.1
     - google-cloud-storage-transfer >=1.20.0
     - google-cloud-tasks >=2.22.0
-    - google-cloud-texttospeech >=2.35.0
-    - google-cloud-translate >=3.25.0
+    - google-cloud-texttospeech >=2.36.0
+    - google-cloud-translate >=3.26.0
     - google-cloud-videointelligence >=2.19.0
     - google-cloud-vision >=3.13.0
     - google-cloud-workflows >=1.21.0
