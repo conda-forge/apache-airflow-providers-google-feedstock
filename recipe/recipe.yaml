@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: apache-airflow-providers-google
-  version: "22.9.0"
+  version: "23.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_google-${{ version }}.tar.gz
-  sha256: 23972c0f60933e5083d73baa6cd7cd4d5ca8d3b79feb11b16daa5be11ad18b69
+  sha256: 983c401b3f0e193a917fa946311c64a893e75227e9c48ad9e682fbf0ae7d71ee
 
 build:
   number: 0
