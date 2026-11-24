@@ -107,7 +107,6 @@ requirements:
     - sqlalchemy-spanner >=1.6.2
     - tenacity >=8.3.0
     - immutabledict >=4.2.0
-    - litellm >=1.98.0
 
 tests:
   - python:
